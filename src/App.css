@@ -1,38 +1,83 @@
-.App {
+.todo-app  {
+  max-width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+}
+.todo-title {
+  text-align: center;
+  color: blueviolet;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e4e2e2;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.todo-content{
+  padding: 10px;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-btn {
+  background: red;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  opacity: 0.7;
+}
+.delete-btn:hover {
+  opacity: 1;
+}
+.edit-btn {
+  background: green;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+.edit-btn:hover {
+  opacity: 1;
+}
+.add-item {
+  font-size: 1.5rem;
+}
+.no-todos {
+  font-size: 1.5rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.clear-all {
+  display: block;
+  padding: 12px;
   color: white;
+  background: blueviolet;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 36px;
 }
-
-.App-link {
-  color: #61dafb;
+.clear-all:hover {
+  background: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-btn {
+  display: block;
+  padding: 12px;
+  color: white;
+  background: yellowgreen;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 36px;
+}
+.add-btn:hover {
+  background: green;
+}
+.add-btn:focus {
+  background: yellowgreen;
 }
