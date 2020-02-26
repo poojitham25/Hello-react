@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AddTodo from './Components/AddTodo';
 import Todos from './Components/Todos';
 import './App.css';
+import TodoEmptyMessage from './Components/TodoEmptyMessage';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class App extends Component {
         { id: 2, content: 'play games' }
       ],
       todo: '',
-      editItem: false
+      editItem: false,
+      isEmpty: false
     }
   }
 
@@ -29,26 +31,31 @@ class App extends Component {
     this.setState({
       todos: filteredItems,
       todo: selectedItem.content,
-      editItem: true
+      editItem: true,
+      isEmpty: false
     });
   }
 
   handleClearAll = () => {
     this.setState({
-      todos: []
+      todos: [],
+      isEmpty: false
     });
   };
 
   handleChange = (e) => {
     this.setState({
-      todo: e.target.value
+      todo: e.target.value,
+      isEmpty: false
     })
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.todo === '') {
-      alert("Not allowed");
+      this.setState({
+        isEmpty: true
+      });
       return;
     }
     let data = { id: Math.random(), content: this.state.todo }
@@ -64,7 +71,8 @@ class App extends Component {
       return todo.id !== id
     });
     this.setState({
-      todos: updatedTodos
+      todos: updatedTodos,
+      isEmpty: false
     });
   }
 
@@ -78,6 +86,7 @@ class App extends Component {
           todos={todos}
           onEditTodo={this.editTodo}
           onDeleteTodo={this.deleteTodo}
+          isEmpty={this.state.isEmpty}
         />
 
         <AddTodo

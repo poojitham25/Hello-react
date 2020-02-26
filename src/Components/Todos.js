@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoEmptyMessage from '../Components/TodoEmptyMessage';
 
 const Todos = (props) => {
     let { todos, onDeleteTodo, onEditTodo } = props;
@@ -18,6 +19,7 @@ const Todos = (props) => {
     return (
         <>
             {todoList}
+            <TodoEmptyMessage isEmpty={props.isEmpty} />
         </>
     )
 }
