@@ -81,3 +81,19 @@
 .add-btn:focus {
   background: yellowgreen;
 }
+.edit-item-btn {
+  display: block;
+  padding: 12px;
+  color: white;
+  background: green;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 36px;
+}
+.edit-item-btn:hover {
+  background: greenyellow;
+}
+.edit-item-btn:focus {
+  background: green;
+}

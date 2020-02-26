@@ -7,7 +7,7 @@ const AddTodo = (props) => {
                 <label className="add-item">Add new Todo:</label>
                 <input type="text" value={props.todo} onChange={props.onInputChange} />
                 {props.editItem ?
-                    <button className="add-btn" type="submit">Edit Item</button> :
+                    <button className="edit-item-btn" type="submit">Edit Item</button> :
                     <button className="add-btn" type="submit">Add Item</button>}
             </form>
         </>
