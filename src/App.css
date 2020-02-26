@@ -61,6 +61,7 @@
   border: none;
   cursor: pointer;
   margin-top: 36px;
+  margin-bottom: 36px;
 }
 .clear-all:hover {
   background: red;
@@ -102,4 +103,10 @@
   border: 1px solid red;
   padding: 10px;
   color: red;
+}
+
+@media (max-width: 767px) {
+  .todo-app  {
+    padding: 0;
+  }
 }
