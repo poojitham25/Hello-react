@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AddTodo from './Components/AddTodo';
 import Todos from './Components/Todos';
 import './App.css';
-import TodoEmptyMessage from './Components/TodoEmptyMessage';
 
 class App extends Component {
   constructor(props) {
